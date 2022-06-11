@@ -5,19 +5,23 @@ Console.Clear();
 Console.WriteLine("***************************************");
 Console.WriteLine("Сколько раз а поместиться в число b");
 
-Console.Write("Введите число a: "); //Запрашиваем первое число
-int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите число b: "); //Запрашиваем второе число
-int b = Convert.ToInt32(Console.ReadLine());
+int a = new Random().Next(1, 1000);
+int b = new Random().Next(1, 1000);
 
-if (b < a) //Проверяем выполение условия задачи a < b
+while (a > b)
 {
-    Console.Write("Введеное b, меньше a, не соответствует условию задачи");
+// Console.WriteLine(a); Вводил для проверки работы подбора случаных чисел
+// Console.WriteLine(b);
+a = new Random().Next(1, 1000);
+b = new Random().Next(1, 1000);
 }
-else
-{
+
+Console.Write("Случайное  число а = ");
+Console.WriteLine(a);
+Console.Write("Случайное  число b = ");
+Console.WriteLine(b);
+
 Console.Write("Число a поместится в b ");
 Console.Write(b / a);
 Console.WriteLine(" раз/a");
 Console.WriteLine("***************************************");
-}
