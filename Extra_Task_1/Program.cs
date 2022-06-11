@@ -6,10 +6,10 @@ Console.Clear();
 Console.WriteLine("***************************************");
 Console.WriteLine("Выводим количество единиц по числу N");
 Console.Write("Введите число: ");
-int N = Convert.ToInt32(Console.ReadLine());
+int N = Math.Abs(Convert.ToInt32(Console.ReadLine())); //Исключаем ввод отрицательного числа
 int numbers = 1;
 
-if (N > 0)
+if (N != 0)
 {
     while (numbers < N)
     {
@@ -26,6 +26,6 @@ if (N > 0)
 }
 else
 {
-    Console.WriteLine("Введите число больше 0");
+    Console.WriteLine("Введите число большее 0");
 }
 Console.WriteLine("***************************************");
