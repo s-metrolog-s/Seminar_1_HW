@@ -7,10 +7,10 @@ Console.Clear();
 Console.WriteLine("***************************************");
 Console.WriteLine("Выведем все четные числа от 1 до N");
 Console.Write("Введите число: ");
-int N = Convert.ToInt32(Console.ReadLine());
+int N = Math.Abs(Convert.ToInt32(Console.ReadLine())); //Исключаем ввод отрицательных чисел
 int count = 2;
 
-if (N < 2)
+if (N < 2) //Проверяем условие для вывода цифр, так как условие актуально только для значения >= 2
 {
     Console.WriteLine("Введите другое число");
 }
